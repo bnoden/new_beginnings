@@ -12,9 +12,7 @@ exports.createWindow = () => {
     minHeight: 150,
     x: winState.x,
     y: winState.y
-  });
-
-  this.win.webContents.openDevTools()
+  })
   this.win.loadURL(`file://${__dirname}/renderer/main.html`)
   this.win.on('closed', () => this.win = null)
 }

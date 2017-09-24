@@ -1,4 +1,5 @@
-const { app } = require('electron'), mainWindow = require('./mainWindow')
+const { app } = require('electron')
+const mainWindow = require('./mainWindow')
 
 app.on('ready', mainWindow.createWindow)
 app.on('window-all-closed', () => 'darwin' !== process.platform && app.quit())
